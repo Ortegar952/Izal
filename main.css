@@ -609,6 +609,9 @@ input[type=text], textarea {
         padding:10px 25px;
         font-size: 15px;
          }
+    .container:hover .overlay, .container:active .overlay {
+            opacity: 1;
+    }
 
     /* ====================
          ABOUT-- DESKTOP
@@ -698,6 +701,9 @@ input[type=text], textarea {
     .more-projects{
         font-size: 0.5rem;
       }
+      .project:hover, .project:active{
+        transform:scale(0.9);
+    }
 /*  ==================================================        
                 Thank You Page
   ===================================================*/
