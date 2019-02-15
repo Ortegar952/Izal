@@ -55,8 +55,11 @@ window.onload = function(){
               email = userEmail.value;
               return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
             }
-           document.addEventListener("touchstart", function(){}, 
-           true);
+           $('.hover').on('touchstart touchend', function(e) {
+                  e.preventDefault();
+                  $(this).toggleClass('hover_effect');
+              });
+        
 
                 
 
