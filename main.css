@@ -609,7 +609,7 @@ input[type=text], textarea {
         padding:10px 25px;
         font-size: 15px;
          }
-    .container:active .overlay {
+    .container:hover .overlay, .container:active .overlay {
             opacity: 1;
       }
 
