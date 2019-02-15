@@ -55,16 +55,7 @@ window.onload = function(){
               email = userEmail.value;
               return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
             }
-            var p = document.getElementsByClassName('container')[0];
-            p.onclick = function() {
-            console.log(p)
-             // Trigger the `hover` event on the paragraph
-             p.onhover.call(p);
-            };
-        
-
-                
-
+    
      }
     
         
