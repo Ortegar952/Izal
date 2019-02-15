@@ -54,7 +54,10 @@ window.onload = function(){
           function emailIsValid (email) {
               email = userEmail.value;
               return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-                }
+            }
+           document.addEventListener("touchstart", function(){}, 
+           true);
+
                 
 
      }
