@@ -96,6 +96,7 @@ body{
     border-radius: 20px;
     font-size: 12px;
     transition:.3s;
+    border: none;
     }
 .btn a{
     text-decoration: none;
@@ -109,7 +110,6 @@ body{
     transform: scale(1.2);
     background:black;
     color:white;
-    border:none;
 }
 .overlay {
     position: absolute;
@@ -245,6 +245,7 @@ body{
              Projects-Page
 ============================================= */
 .title-work{
+    font-size: 1.7em;
     margin-left: 40px;
     margin-top:60px;
 }
@@ -323,7 +324,7 @@ body{
     margin-top: 70px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 0.7rem;
   }
 /* ==============================================
              Contact-Page
@@ -340,10 +341,11 @@ body{
     min-width: 40%;
     margin: 30px auto;
     text-align: center;
+    line-height: 1.5;
 }
 .question-line{
     margin-bottom: 0;
-    color:purple;
+    
 }
 .contact-banner{
     font-weight: bold;
@@ -416,8 +418,6 @@ input[type=text], textarea {
     width: 300px;
     height: 200px;
 }
-
-
 /*  ==================================================        
                 MEDIA QUERIES - DESKTOP
   ===================================================*/
