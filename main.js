@@ -55,7 +55,9 @@ window.onload = function(){
               email = userEmail.value;
               return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
             }
-            $('body').on('touchstart', function() {});
+            $('body').on('touchstart', function() {
+              console.log("Im alive")
+            });
 
 
      }

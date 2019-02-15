@@ -609,9 +609,9 @@ input[type=text], textarea {
         padding:10px 25px;
         font-size: 15px;
          }
-    .container:hover .overlay, .container:active .overlay {
+    .container:active .overlay {
             opacity: 1;
-    }
+      }
 
     /* ====================
          ABOUT-- DESKTOP
