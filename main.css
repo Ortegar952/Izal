@@ -556,6 +556,9 @@ input[type=text], textarea {
         }
        
 }
+
+
+
 /*  ==================================================        
                 MEDIA QUERIES - MOBILE
   ===================================================*/
@@ -567,34 +570,29 @@ input[type=text], textarea {
     .header-nav{
       display: none;
     }
-      
     .grid-images{
-        display: flex;
-        flex-direction:column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         justify-content:center;
         margin-top:32px;
        }
     .about{
-        flex:1;
         width: 85%;
         height:390px;
         margin:20px auto;
 
       }
     .work{
-        flex:1;
         width: 95%;
         height:300px;
         margin:20px auto;
        }
     .blog{
-        flex:1;
         width: 85%;
         height:390px;
         margin:20px auto;
        }
     .contact{
-        flex:1;
         width: 95%;
         height:300px;
         margin:20px auto;
@@ -793,4 +791,5 @@ input[type=text], textarea {
         display:none;
     }
 }
+
 
