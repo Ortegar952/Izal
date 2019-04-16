@@ -553,12 +553,8 @@ input[type=text], textarea {
         .footer ul{
             margin: 0 18%;
             list-style: none;
-        }
-       
+        }   
 }
-
-
-
 /*  ==================================================        
                 MEDIA QUERIES - MOBILE
   ===================================================*/
