@@ -45,21 +45,22 @@
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h1>Drop a line</h1>
-                
                 <div class="container-form">
-                        <!-- action="https://formspree.io/Ortegar95@gmail.com" -->
-                        <form id="contact-form-"  method="POST">
+                        <form id="contact-form"  method="POST">
                           <label >First Name</label>
-                          <input type="text" id="fname" name="first_name"  >
+                          <input type="text" name="fname" placeholder="">
+                          <p>First Name must be and contain 5 - 12 characters</p>
                       
                           <label >Last Name</label>
-                          <input type="text" id="lname" required >
+                          <input type="text" name="lname" placeholder="" >
+                          <p>Last Name must be and contain 5 - 12 characters</p>
                          
                           <label >Email</label>
-                          <input type="text" id="email" name="User_email"   >
+                          <input type="text" name="email" placeholder="">
+                          <p>Email must be a valid address, e.g. me@mydomain.com</p>
                       
                           <label >Message</label>
-                          <textarea id="message" placeholder="Write something.." style="height:150px" name="message"></textarea>
+                          <textarea id="message" name="message"placeholder="Write something.." style="height:150px" name="message"></textarea>
                           <input type="text" name="_gotcha" style="display:none" />
                           <button class="btn-submit" id="myBtn">Send E-mail &#8594</button>
                           <input type="hidden" name="_next" value="https://ortegar952.github.io/Izal/thankyou.html"/>

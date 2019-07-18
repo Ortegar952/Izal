@@ -369,6 +369,7 @@ input[type=text], textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
+    outline: none !important;
   }
   .btn-submit {
     background-color: #F2B134;
@@ -387,6 +388,29 @@ input[type=text], textarea {
     border-radius: 5px;
     background-color: #f2f2f2;
   }
+  /* //validation styles */
+  input.valid{
+    border-color:#36cc36;
+    }
+  input.invalid{
+    border-color:red;
+    }
+  input + p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.2ems;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: red;
+    opacity: 0;
+    height: 0;
+    }
+   input.invalid + p{
+    opacity: 1;
+    height: auto;
+    margin-bottom:20px; 
+   }
+
 /*  ==================================================        
                 Thank You Page
   ===================================================*/

@@ -1,8 +1,9 @@
 window.onload = function(){
 
+                        // NAVIGATION SIDE BAR//
         const myNavbar = document.querySelector('#myNavbar');
         myNavbar.onclick = function(){ 
-            document.querySelector('#side-menu').style.width = '250px';
+        document.querySelector('#side-menu').style.width = '250px';
         };
 
         const closeBtn = document.querySelector('#closeBtn');
@@ -10,53 +11,47 @@ window.onload = function(){
         document.querySelector('#side-menu').style.width = '0';
         };
 
-         // TweenMax.staggerFrom('.project', 3, {opacity:0, y:-300, ease:Back.easeOut.config(3)}, 2);
 
-        let contactForm = document.querySelector('#contact-form-');
         const myBtn = document.querySelector('#myBtn');
-        const firstName = document.querySelector('#fname');
-        const lastName = document.querySelector('#lname');
-        const userEmail = document.querySelector('#email');
-        const userMessage = document.querySelector('#message');
-       
-        myBtn.onclick = function (){
-          if(!firstName.value){
-              firstName.style.borderColor = "red";
-                return false;
-                }
-          else{
-              firstName.style.borderColor = "green";
-              }
-          if(!lastName.value){
-              lastName.style.borderColor = "red";
-                return false;
-              }
-          else{
-              lastName.style.borderColor = "green";
-              }
-           if(!emailIsValid(email)){
-              userEmail.style.borderColor = "red";
-              return false;
-              }
-            else{
-                email.style.borderColor = "green";
-              }
-            if(!userMessage.value){
-                userMessage.style.borderColor = "red";
-                return false;
-                 }
-            else{
-                userMessage.style.borderColor = "green";
-              }
-            contactForm.setAttribute('action', 'https://formspree.io/' + 'Ortegar95' + '@' + 'gmail' + '.' + 'com');           
-           }
+        let contactForm = document.querySelector('#contact-form');
+        let inputs = document.querySelectorAll('input');
+        console.log(inputs);
 
-          function emailIsValid (email) {
-              email = userEmail.value;
-              return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        let patterns = {
+            telephone: /^\d{10}$/, // to match any digit from 0 - 9 with only 10 characters;
+            fname : /^[a-z\d]{3,12}$/i,
+            lname : /^[a-z\d]{5,12}$/i,
+            //message: /^[a-z\d]{1,100}$/i,
+            email:     /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
+          };
+
+          let validate = (field,regex) =>{
+              console.log(regex.test(field.value))
+              if(regex.test(field.value)){
+                field.className = 'valid';
+              }
+              else{
+                field.className = 'invalid';
+              }
             }
-    
-     }
+              
+          inputs.forEach((input)=>{
+              input.addEventListener('keyup',(e) => {
+             // console.log(e.target.attributes.name.value)
+              validate(e.target, patterns[e.target.attributes.name.value])
+            });
+         });
+
+        myBtn.onclick =  (e) =>{
+            //e.preventDefault();
+            console.log('Im alive');
+            contactForm.setAttribute('action', 'https://formspree.io/' + 'Ortegar95' + '@' + 'gmail' + '.' + 'com');           
+
+        }
+      }
+
+
+     
     
         
         
