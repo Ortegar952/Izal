@@ -21,7 +21,6 @@ window.onload = function(){
             telephone: /^\d{10}$/, // to match any digit from 0 - 9 with only 10 characters;
             fname : /^[a-z\d]{3,12}$/i,
             lname : /^[a-z\d]{5,12}$/i,
-            //message: /^[a-z\d]{1,100}$/i,
             email:     /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
           };
 
@@ -37,7 +36,7 @@ window.onload = function(){
               
           inputs.forEach((input)=>{
               input.addEventListener('keyup',(e) => {
-             // console.log(e.target.attributes.name.value)
+             console.log(e.target.attributes.name.value)
               validate(e.target, patterns[e.target.attributes.name.value])
             });
          });
